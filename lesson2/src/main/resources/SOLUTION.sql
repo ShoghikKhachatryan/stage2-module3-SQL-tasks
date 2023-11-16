@@ -25,11 +25,11 @@ INSERT INTO paymenttype (name) VALUES ('DAILY');
 INSERT INTO paymenttype (name) VALUES ('WEEKLY');
 INSERT INTO paymenttype (name) VALUES ('MONTHLY');
 
---INSERT INTO payment (amount, type_id, student_id) SELECT 1000, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'John' AND paymenttype.name = 'Weekly';
---INSERT INTO payment (amount,type_id, student_id) SELECT 2300, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Oliver' AND paymenttype.name = 'Monthly';
---INSERT INTO payment (amount, type_id, student_id) SELECT 24000, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Henry' AND paymenttype.name = 'Weekly';
---INSERT INTO payment (amount, type_id, student_id) SELECT 1800, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'James' AND paymenttype.name = 'Daily';
---INSERT INTO payment (amount, type_id, student_id) SELECT 1700, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Jacob' AND paymenttype.name = 'Weekly';
+--INSERT INTO payment (amount, payment_date, type_id, student_id) SELECT 1000, CURRENT_TIMESTAMP, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'John' AND paymenttype.name = 'Weekly';
+--INSERT INTO payment (amount, payment_date, type_id, student_id) SELECT 2300, CURRENT_TIMESTAMP, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Oliver' AND paymenttype.name = 'Monthly';
+--INSERT INTO payment (amount, payment_date, type_id, student_id) SELECT 24000, CURRENT_TIMESTAMP, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Henry' AND paymenttype.name = 'Weekly';
+--INSERT INTO payment (amount, payment_date, type_id, student_id) SELECT 1800, CURRENT_TIMESTAMP, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'James' AND paymenttype.name = 'Daily';
+--INSERT INTO payment (amount, payment_date, type_id, student_id) SELECT 1700, CURRENT_TIMESTAMP, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Jacob' AND paymenttype.name = 'Weekly';
 
 INSERT INTO payment (type_id, amount, payment_date, student_id)
 VALUES
