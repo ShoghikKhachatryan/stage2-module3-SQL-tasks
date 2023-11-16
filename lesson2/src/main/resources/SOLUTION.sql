@@ -25,15 +25,15 @@ INSERT INTO paymenttype (name) VALUES ('DAILY');
 INSERT INTO paymenttype (name) VALUES ('WEEKLY');
 INSERT INTO paymenttype (name) VALUES ('MONTHLY');
 
-INSERT INTO payment (type_id, student_id) VALUES (SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'John', paymenttype.name = 'Weekly');
-INSERT INTO payment (type_id, student_id) VALUES (SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Oliver', paymenttype.name = 'Monthly');
-INSERT INTO payment (type_id, student_id) VALUES (SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Henry', paymenttype.name = 'Weekly');
-INSERT INTO payment (type_id, student_id) VALUES (SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'James', paymenttype.name = 'Daily');
-INSERT INTO payment (type_id, student_id) VALUES (SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Jacob', paymenttype.name = 'Weekly');
+INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'John'AND paymenttype.name = 'Weekly';
+INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Oliver'AND paymenttype.name = 'Monthly';
+INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Henry'AND paymenttype.name = 'Weekly';
+INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'James' AND paymenttype.name = 'Daily';
+INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Jacob'AND paymenttype.name = 'Weekly';
 
-INSERT INTO mark (mark, student_id, subject_id) VALUES (8, SELECT student.student_id subject.subject_id FROM subject, student WHERE student.name = 'Chris', subject.name = 'Art');
-INSERT INTO mark (mark, student_id, subject_id) VALUES (5, SELECT student.student_id subject.subject_id FROM subject, student WHERE student.name = 'Oliver', subject.name = 'History');
-INSERT INTO mark (mark, student_id, subject_id) VALUES (9, SELECT student.student_id subject.subject_id FROM subject, student WHERE student.name = 'Henry', subject.name = 'Geography');
-INSERT INTO mark (mark, student_id, subject_id) VALUES (4, SELECT student.student_id subject.subject_id FROM subject, student WHERE student.name = 'James', subject.name = 'Math');
-INSERT INTO mark (mark, student_id, subject_id) VALUES (9, SELECT student.student_id subject.subject_id FROM subject, student WHERE student.name = 'Jacob', subject.name = 'PE');
-INSERT INTO mark (mark, student_id, subject_id) VALUES (9, SELECT student.student_id subject.subject_id FROM subject, student WHERE student.name = 'Stefie', subject.name = 'English');
+INSERT INTO mark (mark, student_id, subject_id) SELECT 8, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Chris' AND subject.name = 'Art';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 5, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Oliver' AND subject.name = 'History';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Henry' AND subject.name = 'Geography';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 4, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'James' AND subject.name = 'Math';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Jacob' AND subject.name = 'PE';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Stefie' AND subject.name = 'English';
