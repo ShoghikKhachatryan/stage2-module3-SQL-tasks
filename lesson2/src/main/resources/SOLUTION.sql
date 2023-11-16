@@ -10,10 +10,12 @@ INSERT INTO student (name, groupnumber) VALUES ('Logan', 3);
 INSERT INTO student (name, groupnumber) VALUES ('Anna', 4);
 INSERT INTO student (name, groupnumber) VALUES ('Stefie', 5);
 
-INSERT INTO subject (name, grade) VALUES ('Art', 1);
-INSERT INTO subject (name, grade) VALUES ('Music', 1);
-INSERT INTO subject (name, grade) VALUES ('Geography', 2);
-INSERT INTO subject (name, grade) VALUES ('History', 2);
+INSERT INTO subject (name, grade) VALUES
+                                      ('Art', 1),
+                                      ('Music', 1);
+INSERT INTO subject (name, grade) VALUES
+                                      ('Geography', 2),
+                                      ('History', 2);
 INSERT INTO subject (name, grade) VALUES ('PE', 3);
 INSERT INTO subject (name, grade) VALUES ('Math', 3);
 INSERT INTO subject (name, grade) VALUES ('Science', 4);
