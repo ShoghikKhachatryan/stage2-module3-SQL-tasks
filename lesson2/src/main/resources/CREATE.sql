@@ -2,14 +2,14 @@
 CREATE TABLE student
 (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(45),
+    name VARCHAR(255),
     birthday DATE NOT NULL,
     groupnumber INT NOT NULL
 );
 CREATE TABLE subject
 (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(250),
+    name VARCHAR(255),
     description VARCHAR(255),
     grade int NOT NULL
 );
@@ -27,7 +27,7 @@ CREATE TABLE mark
 CREATE TABLE paymenttype
 (
     id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(45)
+    name VARCHAR(255)
 );
 
 CREATE TABLE payment

@@ -25,11 +25,11 @@ INSERT INTO paymenttype (name) VALUES ('DAILY');
 INSERT INTO paymenttype (name) VALUES ('WEEKLY');
 INSERT INTO paymenttype (name) VALUES ('MONTHLY');
 
-INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'John' AND paymenttype.name = 'Weekly';
-INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Oliver' AND paymenttype.name = 'Monthly';
-INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Henry' AND paymenttype.name = 'Weekly';
-INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'James' AND paymenttype.name = 'Daily';
-INSERT INTO payment (type_id, student_id) SELECT paymenttype.type_id, student.student_id FROM paymenttype, student WHERE student.name = 'Jacob' AND paymenttype.name = 'Weekly';
+INSERT INTO payment (amount, type_id, student_id) SELECT 1000, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'John' AND paymenttype.name = 'Weekly';
+INSERT INTO payment (amount,type_id, student_id) SELECT 2300, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Oliver' AND paymenttype.name = 'Monthly';
+INSERT INTO payment (amount, type_id, student_id) SELECT 24000, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Henry' AND paymenttype.name = 'Weekly';
+INSERT INTO payment (amount, type_id, student_id) SELECT 1800, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'James' AND paymenttype.name = 'Daily';
+INSERT INTO payment (amount, type_id, student_id) SELECT 1700, paymenttype.id, student.id FROM paymenttype, student WHERE student.name = 'Jacob' AND paymenttype.name = 'Weekly';
 
 INSERT INTO mark (mark, student_id, subject_id) SELECT 8, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Chris' AND subject.name = 'Art';
 INSERT INTO mark (mark, student_id, subject_id) SELECT 5, student.student_id, subject.subject_id FROM subject, student WHERE student.name = 'Oliver' AND subject.name = 'History';
