@@ -36,7 +36,7 @@ INSERT INTO payment (amount, payment_date, type_id, student_id) SELECT 1700, CUR
 
 INSERT INTO mark (mark, student_id, subject_id) SELECT 8, student.id, subject.id FROM subject, student WHERE student.name = 'Chris' AND subject.name = 'Art';
 INSERT INTO mark (mark, student_id, subject_id) SELECT 5, student.id, subject.id FROM subject, student WHERE student.name = 'Oliver' AND subject.name = 'History';
-INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.id, subject.id FROM subject, student WHERE student.name = 'Henry' AND subject.name = 'Geography';
-INSERT INTO mark (mark, student_id, subject_id) SELECT 4, student.id, subject.id FROM subject, student WHERE student.name = 'James' AND subject.name = 'Math';
-INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.id, subject.id FROM subject, student WHERE student.name = 'Jacob' AND subject.name = 'PE';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.id, subject.id FROM subject, student WHERE student.name = 'James' AND subject.name = 'Geography';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 4, student.id, subject.id FROM subject, student WHERE student.name = 'Jacob' AND subject.name = 'Math';
+INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.id, subject.id FROM subject, student WHERE student.name = 'Logan' AND subject.name = 'PE';
 INSERT INTO mark (mark, student_id, subject_id) SELECT 9, student.id, subject.id FROM subject, student WHERE student.name = 'Stefie' AND subject.name = 'English';
