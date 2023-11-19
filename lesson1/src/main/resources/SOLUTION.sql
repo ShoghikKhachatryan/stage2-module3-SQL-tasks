@@ -1,4 +1,4 @@
-CREATE DATABASE university;
+CREATE SCHEMA IF NOT EXISTS university;
 USE university;
 
 CREATE TABLE student (id BIGINT PRIMARY KEY, name VARCHAR(255), birthday DATE, groupnumber INT);
